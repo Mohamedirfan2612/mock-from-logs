@@ -1,0 +1,2 @@
+{"req":{"verb":"GET","uri":"/api/v2/orders/501"},"res":{"code":200,"type":"application/json","data":{"orderId":501,"total":99.95}}}
+{"req":{"verb":"POST","uri":"/api/v2/orders"},"res":{"code":201,"type":"application/json","data":{"orderId":502,"created":true}}}

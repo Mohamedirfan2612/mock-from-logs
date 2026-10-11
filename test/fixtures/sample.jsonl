@@ -1,0 +1,5 @@
+{"method":"GET","url":"/api/v1/items/1","status":200,"contentType":"application/json","responseBody":{"id":1,"name":"Item One"}}
+{"method":"GET","url":"/api/v1/items/2","status":200,"contentType":"application/json","responseBody":"{\"id\":2,\"name\":\"Item Two\"}"}
+{ this is bad json line that will be skipped }
+{"method":"GET"}
+{"method":"GET","url":"/api/v1/items/99","status":404,"contentType":"application/json","responseBody":{"error":"Not Found"}}

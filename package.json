@@ -1,0 +1,74 @@
+{
+  "name": "mock-from-logs",
+  "version": "0.1.0",
+  "description": "Turn recorded API traffic (HAR, JSONL) into a runnable mock API, mock spec, or MSW v2 handlers with automatic masking",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "mock-from-logs": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": {
+        "import": "./dist/index.d.ts",
+        "require": "./dist/index.d.cts"
+      },
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "npm run clean && tsup",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src test",
+    "format": "prettier --check .",
+    "format:write": "prettier --write .",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run typecheck && npm run lint && npm run test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohamedirfan-26/mock-from-logs"
+  },
+  "bugs": {
+    "url": "https://github.com/mohamedirfan-26/mock-from-logs/issues"
+  },
+  "homepage": "https://github.com/mohamedirfan-26/mock-from-logs#readme",
+  "keywords": [
+    "mock",
+    "api",
+    "har",
+    "jsonl",
+    "msw",
+    "mock-server",
+    "testing",
+    "developer-tools",
+    "traffic-replay"
+  ],
+  "author": "mohamedirfan-26",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@vitest/coverage-v8": "^5.0.3",
+    "eslint": "^10.12.0",
+    "prettier": "^3.9.10",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.71.1",
+    "vitest": "^5.0.3"
+  }
+}

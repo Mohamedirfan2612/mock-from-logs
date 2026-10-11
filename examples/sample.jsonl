@@ -1,0 +1,4 @@
+{"method":"GET","url":"https://api.example.com/v1/products/101","status":200,"contentType":"application/json","responseBody":{"id":101,"title":"Mechanical Keyboard","price":129.99,"inStock":true}}
+{"method":"GET","url":"https://api.example.com/v1/products/102","status":200,"contentType":"application/json","responseBody":{"id":102,"title":"Ergonomic Mouse","price":79.99,"inStock":false}}
+{"method":"GET","url":"https://api.example.com/v1/products/999","status":404,"contentType":"application/json","responseBody":{"error":"Product not found"}}
+{"method":"POST","url":"https://api.example.com/v1/cart","status":201,"contentType":"application/json","responseBody":{"cartId":"cart_12345","itemCount":1}}
